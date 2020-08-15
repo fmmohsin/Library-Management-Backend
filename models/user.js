@@ -6,7 +6,11 @@ let UserSchema = new mongoose.Schema({
     email: String,
     contactNumber: String,
     password: String,
-    isAdmin: Boolean
+    isAdmin: Boolean,
+    books: [{
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "Book"
+    }]
 })
 
 module.exports = mongoose.model('User', UserSchema);

@@ -20,25 +20,5 @@ mongoose.connect('mongodb://test:test12@ds217131.mlab.com:17131/admin1', {
 app.use(login);
 app.use(book);
 app.use(transaction);
-// ##Books##
-
-
-
-// let TransactionSchema = new mongoose.Schema({
-//     UserDetail: {
-//         type: mongoose.Schema.Types.ObjectId,
-//         ref: "User"
-//     },
-//     BookDetail: {
-//         type: mongoose.Schema.Types.ObjectId,
-//         ref: "Book"
-//     },
-//     DueDate: String,
-//     TransactionType: String
-// })
-
-
-// let Transaction = mongoose.model('Transaction', TransactionSchema);
-
 
 app.listen('1234', () => console.log('started'))
